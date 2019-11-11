@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "829757023995",
+    "firebase_url": "https://patio-80166.firebaseio.com",
+    "project_id": "patio-80166",
+    "storage_bucket": "patio-80166.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829757023995:android:c819d61c57bd162f14f25e",
+        "android_client_info": {
+          "package_name": "www.sanju.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829757023995-ve1020kc5fmrvtbneo0k4ieht7s7777g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "www.sanju.in",
+            "certificate_hash": "13c9f7fc0940ac535583f36c85e0541d391856e0"
+          }
+        },
+        {
+          "client_id": "829757023995-kpam356klu93vft5mbi4ve3ebi1039l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFwJDffgh2uCwDkBUcWDCnFuJKjehdU2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829757023995-kpam356klu93vft5mbi4ve3ebi1039l9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

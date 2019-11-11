@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddRecordActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Add Patient"
+            android:textColor="@color/black"
+            android:fontFamily="@font/googlesans_bold"
+            android:textSize="24sp"
+            android:id="@+id/adDogsTitle"/>
+
+
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aName"
+            android:layout_below="@id/adDogsTitle"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Name"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aAge"
+            android:layout_below="@id/aName"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Age"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aLocation"
+            android:layout_below="@id/aAge"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Location"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aPID"
+            android:layout_below="@id/aLocation"
+
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="UPID"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aWeight"
+            android:layout_below="@id/aPID"
+            android:padding="5dp"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Weight"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aSex"
+            android:layout_below="@id/aWeight"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Sex"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aCheck"
+            android:layout_below="@id/aSex"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Check up type"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aSymp"
+            android:layout_below="@id/aCheck"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Symptoms"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/aDoc"
+            android:layout_below="@id/aSymp"
+            android:textColorHighlight="@color/dark_blue"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/googlesans_regular"
+            android:hint="Doctor"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aDoc"
+            android:fontFamily="@font/googlesans_bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:id="@+id/upload"
+            android:text="Upload Record"
+            android:background="@color/orange"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
