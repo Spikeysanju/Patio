@@ -147,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/googlesans_bold"
-            android:text="History"
+            android:text="Donors"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp" />

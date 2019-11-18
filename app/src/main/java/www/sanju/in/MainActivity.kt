@@ -1,22 +1,15 @@
 package www.sanju.`in`
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.FirebaseAuth
-
-import com.google.firebase.FirebaseApp
 import android.content.Intent
-
-import android.widget.Toast
-import com.google.firebase.database.DatabaseReference
-import android.widget.ImageButton
-import com.rengwuxian.materialedittext.MaterialEditText
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_main.*
 import www.sanju.`in`.Activity.*
 
 
@@ -30,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var patientLay: LinearLayout
     private lateinit var signout: Button
     private lateinit var doctorLay: LinearLayout
+    private lateinit var donarLay: LinearLayout
 
 
 
@@ -42,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         FirebaseApp.getApps(this)
         mAuth = FirebaseAuth.getInstance()
-        mCurrentUsers = mAuth!!.currentUser!!
+        mCurrentUsers = mAuth.currentUser!!
 
 
         if (mCurrentUsers != null) {
@@ -77,8 +71,17 @@ class MainActivity : AppCompatActivity() {
         patientLay = findViewById(R.id.patientLay)
         doctorLay = findViewById(R.id.doctorLay)
 
+        donarLay = findViewById(R.id.historyLay)
 
-        signout = findViewById(R.id.signoutBtn);
+        historyLay.setOnClickListener {
+
+            startActivity(Intent(this@MainActivity, DonorsActivity::class.java))
+
+
+        }
+
+
+        signout = findViewById(R.id.signoutBtn)
 
 
         signout.setOnClickListener {
