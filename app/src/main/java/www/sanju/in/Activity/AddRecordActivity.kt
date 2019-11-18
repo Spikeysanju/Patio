@@ -1,25 +1,16 @@
 package www.sanju.`in`.Activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.rengwuxian.materialedittext.MaterialEditText
-import android.widget.Button
-import www.sanju.`in`.R
-import www.sanju.`in`.MainActivity
-import android.content.Intent
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.storage.UploadTask
-import com.google.android.gms.tasks.OnSuccessListener
-import com.google.firebase.storage.StorageReference
-import java.util.UUID.randomUUID
-import android.text.TextUtils
 import android.app.ProgressDialog
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.content.Intent
+import android.os.Bundle
+import android.text.TextUtils
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
-import java.util.*
+import com.rengwuxian.materialedittext.MaterialEditText
+import www.sanju.`in`.MainActivity
+import www.sanju.`in`.R
 
 
 class AddRecordActivity : AppCompatActivity() {
@@ -33,6 +24,9 @@ class AddRecordActivity : AppCompatActivity() {
     private lateinit var doctor: MaterialEditText
     private lateinit var upid: MaterialEditText
     private lateinit var checkuptype: MaterialEditText
+    private lateinit var blood: MaterialEditText
+    private lateinit var mobile: MaterialEditText
+
     private lateinit var uploadRecord:Button
     private lateinit var mRecordDB:DatabaseReference
 
@@ -51,6 +45,10 @@ class AddRecordActivity : AppCompatActivity() {
         upid = findViewById(R.id.aPID)
         checkuptype = findViewById(R.id.aCheck)
         uploadRecord = findViewById(R.id.upload)
+
+        blood = findViewById(R.id.aBlood)
+        mobile = findViewById(R.id.amob)
+
 
 
         mRecordDB = FirebaseDatabase.getInstance().reference.child("Records")
@@ -84,6 +82,9 @@ class AddRecordActivity : AppCompatActivity() {
         val pdoc = doctor.text.toString().trim()
         val pupid = upid.text.toString().trim()
         val pcheck = checkuptype.text.toString().trim()
+        val pmob = mobile.text.toString().trim()
+        val pblood = blood.text.toString().trim()
+
 
 
 
@@ -95,6 +96,8 @@ class AddRecordActivity : AppCompatActivity() {
             && !TextUtils.isEmpty(psymp)
             && !TextUtils.isEmpty(pdoc)
             && !TextUtils.isEmpty(pupid)
+            && !TextUtils.isEmpty(pmob)
+            && !TextUtils.isEmpty(pblood)
 
         ) {
 
@@ -108,9 +111,12 @@ class AddRecordActivity : AppCompatActivity() {
                     newAct.child("doctor").setValue(pdoc)
                     newAct.child("puid").setValue(pupid)
                     newAct.child("checkup").setValue(pcheck)
+            newAct.child("blood").setValue(pblood)
+            newAct.child("no").setValue(pmob)
 
 
-                    dialog.dismiss()
+
+            dialog.dismiss()
 
                     startActivity(Intent(this@AddRecordActivity, MainActivity::class.java))
                     finish()
