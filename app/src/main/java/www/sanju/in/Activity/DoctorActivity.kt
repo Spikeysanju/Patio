@@ -1,7 +1,6 @@
 package www.sanju.`in`.Activity
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +8,13 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.*
 import www.sanju.`in`.Model.Doctor
-import www.sanju.`in`.Model.Patient
 import www.sanju.`in`.R
 
 class DoctorActivity : AppCompatActivity() {
@@ -40,9 +39,6 @@ class DoctorActivity : AppCompatActivity() {
             this,
             LinearLayout.VERTICAL, false
         )
-
-
-
 
         getDoctorRecords()
 
